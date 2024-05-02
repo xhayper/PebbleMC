@@ -21,7 +21,6 @@ jobs:
       - uses: gradle/actions/setup-gradle@v3
       - name: Configure Git
         run: git config --global user.email "no-reply@github.com" && git config --global user.name "Github Actions"
-      - run: chmod +x ./gradlew
       - name: Apply Patches
         run: ./gradlew applyPatches --no-daemon --stacktrace
       - name: Build
